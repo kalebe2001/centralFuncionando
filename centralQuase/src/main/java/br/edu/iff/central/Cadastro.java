@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kalebe e lucas
  */
+@Entity
+@Table(name = "usuario")
 public class Cadastro extends HttpServlet {
 
     /**
@@ -91,3 +93,14 @@ public class Cadastro extends HttpServlet {
     }// </editor-fold>
 
 }
+
+    @Column (name="ds_email")
+    private String email;
+    @Column(name = "nm_first")
+    private String nome;
+    @Column (name="nm_last")
+    private String sobrenome;
+    @Column (name="ds_nick")
+    private String nick;
+    @Column (name="ds_password")
+    private String senha;
