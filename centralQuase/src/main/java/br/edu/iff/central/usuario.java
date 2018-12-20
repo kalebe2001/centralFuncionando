@@ -82,4 +82,8 @@ public class usuario {
     private String senha;
     private String nickname;
     
+     @Column (name="ds_nick")
+    private String nick;
+    @Column (name="ds_password")
+    
 }
