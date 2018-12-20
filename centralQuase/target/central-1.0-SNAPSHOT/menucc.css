@@ -1,0 +1,45 @@
+body{
+    background-color: #000000;
+}
+
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#FFA500;
+    list-style:none;
+}
+
+#menu ul li { display: inline; }
+
+#menu ul li a {
+    padding: 25px 50px;
+    display: inline-block;
+    background-color:#EDEDED;
+    color: #333;
+    text-decoration: none;
+    border-bottom:3px solid #EDEDED;
+}
+
+#imagem1 {
+	height: 640px; 
+	width: 450px;
+	position: absolute;
+	top: 15%;
+	left: 35%;
+}
+
+#imagem2 {
+	height: 640px; 
+	width: 450px;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+}
+
+#imagem3 {
+	height: 640px;
+	width: 450px;
+	position: absolute;
+	top: 15%;
+	left: 70%;
+}
