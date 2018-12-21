@@ -96,11 +96,7 @@ public class Cadastro extends HttpServlet {
 
     @Column (name="ds_email")
     private String email;
-    @Column(name = "nm_first")
-    private String nome;
-    @Column (name="nm_last")
-    private String sobrenome;
-    @Column (name="ds_nick")
+    @Column (name="nickname")
     private String nick;
-    @Column (name="ds_password")
+    @Column (name="senha")
     private String senha;
