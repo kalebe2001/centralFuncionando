@@ -1,0 +1,44 @@
+<%-- 
+    Document   : listarJsp
+    Created on : 11/09/2019, 09:02:41
+    Author     : kalebe
+--%>
+
+
+<%@page import="java.util.List"%>
+<%@page import="org.hibernate.Transaction"%>
+<%@page import="util.HibernateUtil"%>
+<%@page import="org.hibernate.Session"%>
+<%@page import="com.ginf.ginffinal.Usuario"%>
+<%@page import="" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://displaytag.sf.net" prefix="display" %>
+<jps:directive.page import="com.ginf.ginffinal"/>
+<jps:directive.page import="util"/>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Lista de usuarios</h1>
+        <%
+             Session sessionRecheio;
+        sessionRecheio = HibernateUtil.getSession();
+        Transaction tr = sessionRecheio.beginTransaction();
+        String hql="from.Usuario u ";
+        List<Usuario> lista = (List)sessionRecheio.createQuery(hql).list();
+        tr.commit();
+        
+         request.setAttribute("usuario" , lista);
+            
+           %> 
+           <display:table name="usuario">
+               <display:column propety="nickname" title="nickname"/>
+                <display:column propety="nome" title="Nome"/>
+                 <display:column propety="senha" title="Senha"/>
+            </display:table>
+    </body>
+</html>
